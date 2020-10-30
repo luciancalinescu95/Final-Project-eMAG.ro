@@ -1,0 +1,13 @@
+
+{
+  "pageLoadTimeout": 40000,
+  "video": false,
+  "defaultCommandTimeout": 40000,
+  "requestTimeout": 40000,
+  "responseTimeout": 40000,
+  "numTestsKeptInMemory": 1,
+  "capture": "viewport",
+  "viewportWidth": 1280,
+  "viewportHeight": 720
+  
+}
