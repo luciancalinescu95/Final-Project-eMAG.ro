@@ -5,7 +5,7 @@ describe("Project",()=>{
         cy.visit("https://emag.ro");
     })
 
-    it("Login Tests",()=>{
+    it("TM-QA08-448 : Sign In",()=>{
         cy.get('#my_account > .visible-lg-inline').click({force:true});
           });
 
