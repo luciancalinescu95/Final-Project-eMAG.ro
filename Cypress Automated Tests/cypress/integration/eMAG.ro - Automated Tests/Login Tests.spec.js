@@ -1,13 +1,15 @@
 /// <reference types="Cypress" />
 
 describe("Project",()=>{
-    it("eMAG.ro",()=>{
+    it("Visit eMAG.ro",()=>{
         cy.visit("https://emag.ro");
     })
 
-    it("TM-QA08-448 : Sign In",()=>{
-        cy.get('#my_account > .visible-lg-inline').click({force:true});
+    /* it.only("TM-QA08-448 : Sign In",()=>{
+        cy.visit("https://emag.ro").wait(5000);
+        cy.get('#my_account > .visible-lg-inline').click({force:true}).wait(5000);
           });
+          // after typing the password we have a captcha login and we can't automate the test */
 
 
 });
