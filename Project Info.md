@@ -4,13 +4,13 @@
 
 This project will include:
 - Mindmaps for the site and testing approach
-- Design manual tests after mindmaps (TestLink)
-- Smoke testing, Exploratory testing
+- Manual test cases (TestLink)
+- Smoke testing for main functionalities, Exploratory testing
 - UI Tests: Login, Register Account, Search Bar functionality and others
-- Testing will be automated using Cypress
-- End-to-end tests
+- Component testing: End-to-end tests: login,browse,pick,add,update,remove,costs,checkout
 - API tests using Postman
-- Non-Functional Testing: Compability, Performance, Security, Load Testing
+- Automated tests with Cypress
+- Non-Functional Testing: Compability: cross-browsers,devices,OS; Performance, Security
 
 
 
