@@ -6,10 +6,16 @@ describe("Project",()=>{
     })
 
     /* it.only("TM-QA08-448 : Sign In",()=>{
-        cy.visit("https://emag.ro").wait(5000);
-        cy.get('#my_account > .visible-lg-inline').click({force:true}).wait(5000);
-          });
-          // after typing the password we have a captcha login and we can't automate the test */
+        cy.visit("https://emag.ro");
+        cy.get('#my_account > .visible-lg-inline').click({force:true});
+        cy.get('#user_login_email').click({force:true}).type('email@gmail.com');
+        cy.get('#user_login_continue').click({force:true});
+
+        -- captcha login further --
+
+    }); 
+    */
+          
 
 
 });
