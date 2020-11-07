@@ -1,0 +1,688 @@
+{
+	"info": {
+		"_postman_id": "e473e6b0-c68f-4923-87ce-fb70a597a497",
+		"name": "eMAG.ro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login In button",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6f670654-4c7d-46f8-94e2-ebb4c401fe63",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Page contains email field\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Introdu adresa de email\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/user/login?ref=hdr_login_btn",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "ref",
+							"value": "hdr_login_btn"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Laptops Category",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6af9c0a8-575e-4864-afe9-83e433995b9d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/garez.php?cd20=2&cd11=a%3A1%3A%7Bs%3A7%3A%22user_id%22%3Bi%3A2020580101614615805%3B%7D&cd23=1604762023-41711.252-391588405&cd4=91&cd6=1&cd8=hp_menu_quick-nav_1_1&cd10=category&cd14=1&cd16=popularity%20desc&cd17=60&cd18=&cd46=not_found&cd64=160476202311358848&dr=https://www.emag.ro/&dt=Laptopuri%20-%20eMAG.ro&tid=UA-220157-3&v=1&t=pageview&cid=9518397148.1595618101&cd12=9518397148.1595618101&uid=not_found&cd28=not_found&dl=https://www.emag.ro/laptopuri/c%3Fref=hp_menu_quick-nav_1_1%26type=category",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"garez.php"
+					],
+					"query": [
+						{
+							"key": "cd20",
+							"value": "2"
+						},
+						{
+							"key": "cd11",
+							"value": "a%3A1%3A%7Bs%3A7%3A%22user_id%22%3Bi%3A2020580101614615805%3B%7D"
+						},
+						{
+							"key": "cd23",
+							"value": "1604762023-41711.252-391588405"
+						},
+						{
+							"key": "cd4",
+							"value": "91"
+						},
+						{
+							"key": "cd6",
+							"value": "1"
+						},
+						{
+							"key": "cd8",
+							"value": "hp_menu_quick-nav_1_1"
+						},
+						{
+							"key": "cd10",
+							"value": "category"
+						},
+						{
+							"key": "cd14",
+							"value": "1"
+						},
+						{
+							"key": "cd16",
+							"value": "popularity%20desc"
+						},
+						{
+							"key": "cd17",
+							"value": "60"
+						},
+						{
+							"key": "cd18",
+							"value": ""
+						},
+						{
+							"key": "cd46",
+							"value": "not_found"
+						},
+						{
+							"key": "cd64",
+							"value": "160476202311358848"
+						},
+						{
+							"key": "dr",
+							"value": "https://www.emag.ro/"
+						},
+						{
+							"key": "dt",
+							"value": "Laptopuri%20-%20eMAG.ro"
+						},
+						{
+							"key": "tid",
+							"value": "UA-220157-3"
+						},
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "t",
+							"value": "pageview"
+						},
+						{
+							"key": "cid",
+							"value": "9518397148.1595618101"
+						},
+						{
+							"key": "cd12",
+							"value": "9518397148.1595618101"
+						},
+						{
+							"key": "uid",
+							"value": "not_found"
+						},
+						{
+							"key": "cd28",
+							"value": "not_found"
+						},
+						{
+							"key": "dl",
+							"value": "https://www.emag.ro/laptopuri/c%3Fref=hp_menu_quick-nav_1_1%26type=category"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shopping Cart hover - 0 products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c80aab63-e8ef-4e22-977b-61fe00f0e604",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/shopping/header-cart?act=load&source=front",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"shopping",
+						"header-cart"
+					],
+					"query": [
+						{
+							"key": "act",
+							"value": "load"
+						},
+						{
+							"key": "source",
+							"value": "front"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add to Favourite button",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0fa0b66-810e-4134-b83f-8c3e2ad4bdf0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/favorites/type/emag/products?ref=add_to_fav_pd",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"favorites",
+						"type",
+						"emag",
+						"products"
+					],
+					"query": [
+						{
+							"key": "ref",
+							"value": "add_to_fav_pd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add to Favourite button",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f9e6241-3342-4d95-a68d-7f38813951ea",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/favorites/type/emag/products?source=front&limit=6",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"favorites",
+						"type",
+						"emag",
+						"products"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "front"
+						},
+						{
+							"key": "limit",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Favourite button",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4086622d-6a3d-4399-bcfe-635d5873aaac",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/favorites/type/emag/products?ref=fav_remove-from-list-btn\n",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"favorites",
+						"type",
+						"emag",
+						"products"
+					],
+					"query": [
+						{
+							"key": "ref",
+							"value": "fav_remove-from-list-btn\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "79f73f79-d658-4088-81b2-6c7ed14cad6f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/profile_async/bKOCMKeywPAOsZc8QheVczM2aFRQUEEwYW1zRTN6a0VybWpqSXBhOHpJNzkrUzFTSWhIMDQxMUg4cHJReGs5UWVEalU1OVdSQTM2cGdvays4VjM1ZmpzazlFR1o0eXBOaFFoMkRKc3dPbDdZYVRYT0tGd1dxRHhld2x5MmUrVVdDUkFWeTNVdlo3MWZkaURyNytJZFRQWEF1K0RrUklTdXFMMFhLT0hlUUlPelNaRTRBbzRLN3o3cEhQU1htckgyS2dvNnVMY1BrVGpmdlM2K0c4VFNITHpDdGZwUlRIbkE4TnpjZmc9PQ__/o/?r=1604762669&c=-8&sd=0",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"profile_async",
+						"bKOCMKeywPAOsZc8QheVczM2aFRQUEEwYW1zRTN6a0VybWpqSXBhOHpJNzkrUzFTSWhIMDQxMUg4cHJReGs5UWVEalU1OVdSQTM2cGdvays4VjM1ZmpzazlFR1o0eXBOaFFoMkRKc3dPbDdZYVRYT0tGd1dxRHhld2x5MmUrVVdDUkFWeTNVdlo3MWZkaURyNytJZFRQWEF1K0RrUklTdXFMMFhLT0hlUUlPelNaRTRBbzRLN3o3cEhQU1htckgyS2dvNnVMY1BrVGpmdlM2K0c4VFNITHpDdGZwUlRIbkE4TnpjZmc9PQ__",
+						"o",
+						""
+					],
+					"query": [
+						{
+							"key": "r",
+							"value": "1604762669"
+						},
+						{
+							"key": "c",
+							"value": "-8"
+						},
+						{
+							"key": "sd",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delivery options",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "488e5075-dc2e-4b23-b742-4823e5481046",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/cart/get-delivery-options",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"cart",
+						"get-delivery-options"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update quantity in shopping cart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0006eca4-9596-4d41-8e35-8b1ba695890d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/cart/update",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"cart",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update quantity - Price is updated",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "638a97ef-7ecb-4b2f-8b11-ab586e7739c1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/cart/get-totals",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"cart",
+						"get-totals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove item from shopping cart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "49ab0fc7-c19c-40ba-91e3-ea554b71c275",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/cart/remove",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"cart",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empty shopping cart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "267c8403-6e49-4016-85d2-4e4a1abe733b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/cart/get-empty",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"cart",
+						"get-empty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favourite list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c34a97aa-b46f-4da0-b961-5de10cc0c553",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.emag.ro/favorites/lists/type/emag/product_ids?source=front",
+					"protocol": "https",
+					"host": [
+						"www",
+						"emag",
+						"ro"
+					],
+					"path": [
+						"favorites",
+						"lists",
+						"type",
+						"emag",
+						"product_ids"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "front"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
