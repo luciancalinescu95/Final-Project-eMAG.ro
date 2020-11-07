@@ -9,7 +9,7 @@ This project will include:
 - UI Tests: Login, Register Account, Search Bar functionality and others
 - Testing will be automated using Cypress
 - End-to-end tests
-- API tests usign Postman
+- API tests using Postman
 - Non-Functional Testing: Compability, Performance, Security, Load Testing
 
 
