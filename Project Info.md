@@ -4,7 +4,7 @@
 
 This project will include:
 - Mindmaps for the site and testing approach
-- Manual test cases (TestLink)
+- Test Cases plan (TestLink)
 - Smoke testing for main functionalities, Exploratory testing
 - UI Tests: Login, Register Account, Search Bar functionality and others
 - Component testing: End-to-end tests: login,browse,pick,add,update,remove,costs,checkout
