@@ -1,0 +1,1639 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>testspec TM-QA08 - Final Project</title>
+<link type="text/css" rel="stylesheet" href="https://testlink.scoalainformala.ro/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo" height="53" src="https://testlink.scoalainformala.ro/gui/themes/default/images/tl-logo-transparent-25.png" /></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: TM-QA08<br>Test Suite: TM-QA08 - Final Project</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 10/11/2020</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><b><p style="padding-left: 20px;"><a href="#toc_1">1.Final Project</a></p></b>
+<b><p style="padding-left: 30px;"><a href="#toc_1_1">1.1.eMAG.ro</a></p></b>
+<b><p style="padding-left: 40px;"><a href="#toc_1_1_1">1.1.1.Functional Testing</a></p></b>
+<b><p style="padding-left: 50px;"><a href="#toc_1_1_1_1">1.1.1.1.Login</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409196">TM-QA08-448: Sign In</a></p><p style="padding-left: 90px;"><a href="#toc_tc409199">TM-QA08-449: Sign In - No Input</a></p><p style="padding-left: 90px;"><a href="#toc_tc409204">TM-QA08-450: Sign In - Wrong Password</a></p><p style="padding-left: 90px;"><a href="#toc_tc409207">TM-QA08-451: Sign In - Forgotten Password</a></p><p style="padding-left: 90px;"><a href="#toc_tc409210">TM-QA08-452: Account Page</a></p><p style="padding-left: 90px;"><a href="#toc_tc410958">TM-QA08-525: Logout</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_1_2">1.1.1.2.Register Account</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409214">TM-QA08-453: Register Account - Email</a></p><p style="padding-left: 90px;"><a href="#toc_tc409217">TM-QA08-454: Register - Need Help page</a></p><p style="padding-left: 90px;"><a href="#toc_tc410891">TM-QA08-517: Register Account - Facebook</a></p><p style="padding-left: 90px;"><a href="#toc_tc410894">TM-QA08-518: Register Account - Google</a></p><p style="padding-left: 90px;"><a href="#toc_tc410897">TM-QA08-519: Register Account - Apple</a></p><p style="padding-left: 90px;"><a href="#toc_tc410948">TM-QA08-523: Register Account - Name characters</a></p><p style="padding-left: 90px;"><a href="#toc_tc410951">TM-QA08-524: Register Account - Name number of characters</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_1_3">1.1.1.3.Favourite Products</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409221">TM-QA08-455: Add Favourite</a></p><p style="padding-left: 90px;"><a href="#toc_tc409224">TM-QA08-456: Favourite - Display page</a></p><p style="padding-left: 90px;"><a href="#toc_tc409227">TM-QA08-457: Favourite - Delete item</a></p><p style="padding-left: 90px;"><a href="#toc_tc409538">TM-QA08-501: Make new list</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_1_4">1.1.1.4.Add to Bag</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409233">TM-QA08-459: Add to empty Bag</a></p><p style="padding-left: 90px;"><a href="#toc_tc409236">TM-QA08-460: Add to Bag - Same items</a></p><p style="padding-left: 90px;"><a href="#toc_tc409240">TM-QA08-461: Add to Bag - Different items</a></p><p style="padding-left: 90px;"><a href="#toc_tc409282">TM-QA08-474: Add to Bag - Different Colour</a></p><p style="padding-left: 90px;"><a href="#toc_tc409285">TM-QA08-475: Add to Bag - Different Size</a></p><p style="padding-left: 90px;"><a href="#toc_tc410913">TM-QA08-520: Quick add to bag button</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_1_5">1.1.1.5.Shopping Cart</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409244">TM-QA08-462: Empty Shopping Cart</a></p><p style="padding-left: 90px;"><a href="#toc_tc409247">TM-QA08-463: Total Price Updated - 1 item</a></p><p style="padding-left: 90px;"><a href="#toc_tc409250">TM-QA08-464: Total Price Updated - same multiple product</a></p><p style="padding-left: 90px;"><a href="#toc_tc409253">TM-QA08-465: Total Price Updated - 2 different items</a></p><p style="padding-left: 90px;"><a href="#toc_tc409256">TM-QA08-466: Total Price Updated - quantity is updated</a></p><p style="padding-left: 90px;"><a href="#toc_tc409266">TM-QA08-469: Continue Shopping when shopping cart is empty</a></p><p style="padding-left: 90px;"><a href="#toc_tc409269">TM-QA08-470: Checkout -  Empty Shopping Cart</a></p><p style="padding-left: 90px;"><a href="#toc_tc409273">TM-QA08-471: Checkout - Item in Shopping Cart</a></p><p style="padding-left: 90px;"><a href="#toc_tc409276">TM-QA08-472: Checkout</a></p><p style="padding-left: 90px;"><a href="#toc_tc409279">TM-QA08-473: Empty Shopping Cart - Price is zero</a></p><p style="padding-left: 90px;"><a href="#toc_tc411692">TM-QA08-541: Checkout-Delivery choice</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_1_6">1.1.1.6.Account Page</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409554">TM-QA08-504: Delete shipping address</a></p><p style="padding-left: 90px;"><a href="#toc_tc409549">TM-QA08-503: New shipping address</a></p><p style="padding-left: 90px;"><a href="#toc_tc409543">TM-QA08-502: Change Name</a></p><p style="padding-left: 90px;"><a href="#toc_tc409260">TM-QA08-467: Comenzile mele</a></p><p style="padding-left: 90px;"><a href="#toc_tc409263">TM-QA08-468: Garantiile mele</a></p><p style="padding-left: 90px;"><a href="#toc_tc411682">TM-QA08-538: Change Password</a></p><p style="padding-left: 90px;"><a href="#toc_tc411685">TM-QA08-539: Change Email</a></p><p style="padding-left: 90px;"><a href="#toc_tc411701">TM-QA08-542: Return item</a></p><p style="padding-left: 90px;"><a href="#toc_tc411709">TM-QA08-543: Service Item</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_1_7">1.1.1.7.Search Bar</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409318">TM-QA08-483: Input - Zero characters</a></p><p style="padding-left: 90px;"><a href="#toc_tc409321">TM-QA08-484: Input - Numbers 0-9</a></p><p style="padding-left: 90px;"><a href="#toc_tc409324">TM-QA08-485: Input - Numbers 10-99</a></p><p style="padding-left: 90px;"><a href="#toc_tc409327">TM-QA08-486: Input - Special Characters</a></p><p style="padding-left: 90px;"><a href="#toc_tc409330">TM-QA08-487: Input - Valid Characters</a></p><p style="padding-left: 90px;"><a href="#toc_tc409333">TM-QA08-488: Input - Random Characters</a></p><p style="padding-left: 90px;"><a href="#toc_tc409336">TM-QA08-489: Suggestions functionality</a></p><p style="padding-left: 90px;"><a href="#toc_tc409339">TM-QA08-490: Search by Click</a></p><p style="padding-left: 90px;"><a href="#toc_tc409342">TM-QA08-491: Search by Enter</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_1_8">1.1.1.8.Filter Products</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409507">TM-QA08-494: Price filter - Checkbox</a></p><p style="padding-left: 90px;"><a href="#toc_tc409510">TM-QA08-495: Price filter - Interval</a></p><p style="padding-left: 90px;"><a href="#toc_tc409514">TM-QA08-496: Brand - Checkbox</a></p><p style="padding-left: 90px;"><a href="#toc_tc409517">TM-QA08-497: Brand - Search by keyword</a></p><p style="padding-left: 90px;"><a href="#toc_tc409522">TM-QA08-498: Order by price ascending</a></p><p style="padding-left: 90px;"><a href="#toc_tc409527">TM-QA08-499: Order by price descending</a></p><p style="padding-left: 90px;"><a href="#toc_tc409531">TM-QA08-500: Colour filter</a></p><p style="padding-left: 90px;"><a href="#toc_tc410942">TM-QA08-521: Compare products</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_1_9">1.1.1.9.End-to-end</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409565">TM-QA08-507: Login-Logout</a></p><p style="padding-left: 90px;"><a href="#toc_tc409568">TM-QA08-508: Login-Pick product-Add To Bag-Checkout</a></p><p style="padding-left: 90px;"><a href="#toc_tc410968">TM-QA08-528: Login-Search-Pick-Add-Update-Checkout</a></p><p style="padding-left: 90px;"><a href="#toc_tc410973">TM-QA08-530: Guest-Search-Pick-Add-Checkout</a></p><p style="padding-left: 90px;"><a href="#toc_tc410975">TM-QA08-531: Guest-Search-Add Favourite-New list</a></p><p style="padding-left: 90px;"><a href="#toc_tc411688">TM-QA08-540: Guest-Search-Filter price-Add Favourite-Add to bag</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_1_10">1.1.1.10.User Interface</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc410980">TM-QA08-533: Resolution scaling</a></p><p style="padding-left: 90px;"><a href="#toc_tc410983">TM-QA08-534: Mobile mode</a></p><p style="padding-left: 90px;"><a href="#toc_tc410986">TM-QA08-535: Confirmation dialogs</a></p><p style="padding-left: 90px;"><a href="#toc_tc410989">TM-QA08-536: View product images</a></p><b><p style="padding-left: 40px;"><a href="#toc_1_1_2">1.1.2.Non-Functional Testing</a></p></b>
+<b><p style="padding-left: 50px;"><a href="#toc_1_1_2_1">1.1.2.1.Performance</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409297">TM-QA08-477: Response Times</a></p><p style="padding-left: 90px;"><a href="#toc_tc409294">TM-QA08-476: Performance score</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_2_2">1.1.2.2.Compability</a></p></b>
+<b><p style="padding-left: 60px;"><a href="#toc_1_1_2_2_1">1.1.2.2.1.Browsers</a></p></b>
+<p style="padding-left: 105px;"><a href="#toc_tc409302">TM-QA08-478: Chrome</a></p><p style="padding-left: 105px;"><a href="#toc_tc409305">TM-QA08-479: Edge</a></p><p style="padding-left: 105px;"><a href="#toc_tc409308">TM-QA08-480: Firefox</a></p><b><p style="padding-left: 60px;"><a href="#toc_1_1_2_2_2">1.1.2.2.2.Devices</a></p></b>
+<p style="padding-left: 105px;"><a href="#toc_tc409312">TM-QA08-481: Android Official App</a></p><p style="padding-left: 105px;"><a href="#toc_tc411669">TM-QA08-537: Android Chrome Browser</a></p><b><p style="padding-left: 60px;"><a href="#toc_1_1_2_2_3">1.1.2.2.3.OS</a></p></b>
+<p style="padding-left: 105px;"><a href="#toc_tc409558">TM-QA08-505: Windows 10</a></p><p style="padding-left: 105px;"><a href="#toc_tc409561">TM-QA08-506: Linux</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_2_3">1.1.2.3.Security</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc409497">TM-QA08-492: Password input - Not shown</a></p><p style="padding-left: 90px;"><a href="#toc_tc410945">TM-QA08-522: Secure password</a></p><p style="padding-left: 90px;"><a href="#toc_tc410962">TM-QA08-526: Email validation</a></p><p style="padding-left: 90px;"><a href="#toc_tc410965">TM-QA08-527: Secure connection</a></p><p style="padding-left: 90px;"><a href="#toc_tc410977">TM-QA08-532: Multi-factor authentication</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_2_4">1.1.2.4.API</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc410971">TM-QA08-529: API Tests</a></p></div><a name='toc_'></a>
+<h1 class='doclevel'>1.Test Suite : Final Project</h1>
+<a name='toc_'></a>
+<h2 class='doclevel'>1.1.Test Suite : eMAG.ro</h2>
+<a name='toc_'></a>
+<h3 class='doclevel'>1.1.1.Test Suite : Functional Testing</h3>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.1.1.Test Suite : Login</h4>
+<a name="toc_tc409196"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-448: Sign In&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the Sign In functionality is working and the user is logged in.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	The account must exist and no user is signed in.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Click on &quot;Contul Meu&quot;</p>
+<p>
+	3. Type in your email address in the email field</p>
+<p>
+	4. Type in your password</p>
+<p>
+	5. Click on &quot;Continua&quot;</p>
+</td><td><p>
+	The user is logged in and redirected to homepage</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409199"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-449: Sign In - No Input&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the site throws an error message when a user is trying to log in without input data.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Click on Contul Meu</p>
+<p>
+	3. Click on Continua</p>
+</td><td><p>
+	The site will show an error message on the input field.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409204"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-450: Sign In - Wrong Password&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that site will throw an error message when the password input data is incorrect</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	An existing account must be available</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Click on Contul Meu</p>
+<p>
+	3. Type in email</p>
+<p>
+	4. Type random password</p>
+</td><td><p>
+	The site will throw an error message that the password input data is incorrect</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409207"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-451: Sign In - Forgotten Password&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that site will send an email when the user clicks on &quot;Ai uitat parola?&quot; in the Sign In page</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	An existing account must be avalaible</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Click on Contul Meu</p>
+<p>
+	3. Type in Email and click on Continua</p>
+<p>
+	5. Click on &quot;Ai uitat parola&quot;</p>
+</td><td><p>
+	The site will succesfully send an email with a password reset link and confirmation is displayed in the page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409210"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-452: Account Page&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is able to navigate to his account page after he logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Contul Meu</p>
+</td><td><p>
+	The page display the user&#39;s account page and information</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410958"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-525: Logout&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user can succesfully log out.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User must be logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Hover over &quot;Contul meu&quot;</p>
+<p>
+	2. Click on &quot;Log out&quot;</p>
+</td><td><p>
+	The user will be succesfully logged out.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.1.2.Test Suite : Register Account</h4>
+<a name="toc_tc409214"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-453: Register Account - Email&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is redirected to the account creation page when he types in an email that does not exist in the system.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Contul Meu</p>
+<p>
+	2. Type in your email</p>
+<p>
+	3. Click on Continua</p>
+</td><td><p>
+	The user is redirected to the signup page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409217"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-454: Register - Need Help page&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is redirected to the help page on how to create an account</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on Contul Meu</p>
+<p>
+	2. Click on &quot;Ai nevoie de ajutor&quot;</p>
+</td><td><p>
+	The user is redirected to the help page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410891"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-517: Register Account - Facebook&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the user can create an account with Facebook&nbsp;</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Contul Meu</p>
+<p>
+	2. Click on Facebook</p>
+</td><td><p>
+	User is redirected to the Facebook page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410894"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-518: Register Account - Google&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the user can create an account with Google</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Contul Meu</p>
+<p>
+	2. Click on Google</p>
+</td><td><p>
+	User is redirected to the Google page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410897"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-519: Register Account - Apple&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the user can create an account with Apple</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Contul Meu</p>
+<p>
+	2. Click on Apple</p>
+</td><td><p>
+	User is redirected to the Apple page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410948"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-523: Register Account - Name characters&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that input fields of Name and Last name when creating an account are not accepting numbers or special characters</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Contul Meu</p>
+<p>
+	2. Type in your email</p>
+<p>
+	3. Click on &quot;Continua&quot;</p>
+<p>
+	3. Type numbers and special characters in the Name field</p>
+</td><td><p>
+	The system will show an error message that those characters are not accepted</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410951"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-524: Register Account - Name number of characters&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that input fields of Name and Last name when creating an account must be at least 3&nbsp; valid characters</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Contul Meu</p>
+<p>
+	2. Type in your email</p>
+<p>
+	3. Click on &quot;Continua&quot;</p>
+<p>
+	3. Type in 2 valid characters</p>
+</td><td><p>
+	The system will show an error message that the name is too short and it must be at least 3 characters</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.1.3.Test Suite : Favourite Products</h4>
+<a name="toc_tc409221"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-455: Add Favourite&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that a product is added to Favorite when the user clicks on the &quot;Adauga la Favorite&quot; button</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Click on any desired product</p>
+<p>
+	2. Click on &quot;Adauga la Favorite&quot; button</p>
+</td><td><p>
+	The product is added to Favorite</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409224"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-456: Favourite - Display page&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the Favorite page shows up the correct item added</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Click on any product</p>
+<p>
+	3. Click on &quot;Adauga la Favorite&quot;</p>
+<p>
+	4.Click on &quot;Favorite&quot;</p>
+</td><td><p>
+	The user is redirected to the Favorite page and the correct item shows up</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409227"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-457: Favourite - Delete item&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is able to delete a favourite item</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	An existing item must exist already</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on Favorite</p>
+<p>
+	2. Click on the &quot;Sterge&quot; button</p>
+</td><td><p>
+	The item is removed from the list</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409538"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-501: Make new list&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user can make a new list of favourite products</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User must be logged in.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Favorite&quot;</p>
+<p>
+	2. Click on &quot;Lista noua&quot;</p>
+<p>
+	3. Type in on the name field &quot;Test&quot;</p>
+<p>
+	4. Click on &quot;Salveaza&quot;</p>
+</td><td><p>
+	A new list is created with the specified name.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.1.4.Test Suite : Add to Bag</h4>
+<a name="toc_tc409233"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-459: Add to empty Bag&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is able to add one item to bag</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Click on any product</p>
+<p>
+	3. Click on &quot;Adauga in cos&quot;</p>
+</td><td><p>
+	The select item is added to cart</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409236"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-460: Add to Bag - Same items&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the system is able to add one product to the shopping cart when same product is already in the shopping cart and the quantity is updated.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Shopping cart with iPhone 11 black - quantity 1</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Select iPhone 11 black</p>
+<p>
+	3. Click on &quot;Adauga in Cos&quot;</p>
+</td><td><p>
+	Correct item is added to the shopping cart and quantity is increased</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409240"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-461: Add to Bag - Different items&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is able to add a different item to the shopping cart with an existing item</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Shopping cart with iPhone 11 black quantity 1</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Select item Samsung S20 black</p>
+<p>
+	3. Click on &quot;Adauga in Cos&quot;</p>
+</td><td><p>
+	The item is added to the shopping cart and the existing item is still there</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409282"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-474: Add to Bag - Different Colour&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the system is able to add the same product to the shopping cart with different colour</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Shopping cart with T-shirt(black, quantity =1 )</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Select T-shirt (blue, quantity=1)</p>
+<p>
+	2. Click on Adauga in Cos</p>
+<p>
+	3. Go to Cosul Meu</p>
+</td><td><p>
+	The correct item is added to the sopping cart and updated</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409285"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-475: Add to Bag - Different Size&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the system is able to add the same product to the shopping cart with different size</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Shopping cart with T-shirt (M, quantity=1)</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><div>
+	1. Select T-shirt (S, quantity=1)</div>
+<div>
+	2. Click on Adauga in Cos</div>
+<div>
+	3. Go to Cosul Meu</div>
+</td><td><p>
+	Correct item is added to the shopping cart and is updated</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410913"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-520: Quick add to bag button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user can add a product to his shopping cart using the quick &quot;Adauga in cos&quot; button without navigating to the product page</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Navigate to a category of products</p>
+<p>
+	2. Click on &quot;Adauga in cos&quot; button for select product</p>
+</td><td><p>
+	The product is succesfully added to bag</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.1.5.Test Suite : Shopping Cart</h4>
+<a name="toc_tc409244"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-462: Empty Shopping Cart&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is able to empty his shopping cart</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	One item is already in the shopping cart</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Click on &quot;Cosul Meu&quot;</p>
+<p>
+	3. Click on &quot;Sterge&quot; button</p>
+</td><td><p>
+	The item is removed and the shopping cart is empty</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409247"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-463: Total Price Updated - 1 item&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the system calculates the total price when one item is added</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Empty shopping cart</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Add Shirt ( price=50 lei, quantity=1)</p>
+<p>
+	3. Go to &quot;Cosul Meu&quot;</p>
+</td><td><p>
+	Total price is 50 lei</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409250"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-464: Total Price Updated - same multiple product&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that system calculates the price based on the total quantity</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Empty shopping cart.</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Add Shirt ( size, colour, quantity=5, price=50 lei )</p>
+<p>
+	2. Go to Cosul Meu</p>
+</td><td><p>
+	Total price is 250 lei</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409253"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-465: Total Price Updated - 2 different items&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the system will calculate the total price for 2 different items based on quantity</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Shopping cart with T-shirt ( size=S, colour=pink, quantity=3, price=50 lei )</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Add Shirt ( size=S, colour=red,quantity=2, price=100 lei )</p>
+<p>
+	2. Go to Cosul Meu</p>
+</td><td><p>
+	Total price is 350 lei</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409256"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-466: Total Price Updated - quantity is updated&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the system calculates the total price after the quantity for one product is updated</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Shopping cart has Shirt (quantity=2, price=50 lei) and Jeans ( quantity=2, price=100 lei)</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Cosul Meu</p>
+<p>
+	2. Update Jeans quantity to 1</p>
+</td><td><p>
+	Total price is 200 lei</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409266"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-469: Continue Shopping when shopping cart is empty&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that user has the option to choose continue shopping.</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Empty shopping cart</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Cosul Meu</p>
+<p>
+	2. Click on &quot;Intoarce-te in magazin&quot;</p>
+</td><td><p>
+	The user is redirected to main page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409269"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-470: Checkout -  Empty Shopping Cart&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the user is not able to checkout when the shopping cart is empty</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Empty shopping cart</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Cosul Meu</p>
+<p>
+	2. Try to checkout</p>
+</td><td><p>
+	User can&#39;t checkout</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409273"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-471: Checkout - Item in Shopping Cart&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the system allows the user to continue shopping after adding one item in the cart.</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Item already in cart</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Cosul Meu</p>
+<p>
+	2. Choose to continue shopping</p>
+</td><td><p>
+	The user is redirected to shopping activity</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409276"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-472: Checkout&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the system allows the user to checkout when items are in the shopping cart</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Items in the cart</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Cosul Meu</p>
+<p>
+	2. Click on Continua</p>
+</td><td><p>
+	The user is allowed to checkout</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409279"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-473: Empty Shopping Cart - Price is zero&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the system updates the total price after emptying the shopping cart</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	One item is in cart</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Cosul Meu</p>
+<p>
+	2. Update quantity to zero</p>
+</td><td><p>
+	Total price of the shopping cart is zero</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc411692"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-541: Checkout-Delivery choice&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is able to choose his delivery method (courier or self pickup) in his checkout proccess</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	The item can be shipped or self pickup</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.1.6.Test Suite : Account Page</h4>
+<a name="toc_tc409554"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-504: Delete shipping address&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user can delete a shipping address from his account</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User is logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Contul meu&quot;</p>
+<p>
+	2. Click on &quot;Date personale&quot;</p>
+<p>
+	3. In the &quot;Adrese de livrare&quot; box choose your address to delete</p>
+<p>
+	4. Click on &quot;Sterge&quot;</p>
+</td><td><p>
+	The shipping address is deleted</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409549"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-503: New shipping address&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user can add a new shipping address to his account</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User is logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Contul meu&quot;</p>
+<p>
+	2. Click on &quot;Date personale&quot;</p>
+<p>
+	3. Click on &quot;+ adauga adresa&quot;</p>
+<p>
+	4. Type in name,phone number, new address and select city</p>
+<p>
+	5. Click on &quot;Salveaza&quot;</p>
+</td><td><p>
+	The new address is registered to the account</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409543"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-502: Change Name&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user can change his display name in &quot;Contul meu&quot; page</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User is logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Contul meu&quot;</p>
+<p>
+	2. Click on &quot;administreaza datele tale&quot;</p>
+<p>
+	3. In the &quot;Nume Prenume&quot; field type in your desired name</p>
+<p>
+	4. Click on &quot;Salveaza&quot;</p>
+</td><td><p>
+	The user display name is changed to specified name.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409260"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-467: Comenzile mele&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is able to view the &quot;Comenzile mele&quot; page</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User must be logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to emag.ro</p>
+<p>
+	2. Click on Contul Meu</p>
+<p>
+	3. Click on Comenzile mele</p>
+</td><td><p>
+	The user is redirected to his orders page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409263"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-468: Garantiile mele&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is redirected to his &quot;Garantiile mele&quot; page</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	The user must be logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on Contul Meu</p>
+<p>
+	2. Click on Garantiile mele</p>
+</td><td><p>
+	The user is redirected to his warranties page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc411682"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-538: Change Password&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that user is able to change is password</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User is logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Contul meu&quot;</p>
+<p>
+	2. Click on &quot;Setari siguranta&quot;</p>
+<p>
+	3. In the &quot;Parola&quot; field click on &quot;Modifica&quot;</p>
+</td><td><p>
+	User is redirected to the correct page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc411685"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-539: Change Email&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is able to change his email</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User is logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Contul meu&quot;</p>
+<p>
+	2. Click on &quot;Setari siguranta&quot;</p>
+<p>
+	3. In the &quot;Adresa de e-mail&quot; field click on &quot;Modifica&quot;</p>
+</td><td><p>
+	The user is redirected to the correct page</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc411701"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-542: Return item&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user can return an item he bought</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User is logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Contul Meu</p>
+<p>
+	2. Click on Retururile mele</p>
+<p>
+	3. Choose product to return</p>
+<p>
+	4. Select reason,shipping method and address</p>
+<p>
+	5. Click on Trimite</p>
+</td><td><p>
+	A form will be created with the return process</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc411709"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-543: Service Item&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user is able to register a service form for an item he bought</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	User is logged in</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to Contul Meu</p>
+<p>
+	2. Click on Service</p>
+<p>
+	3. Choose product to service</p>
+<p>
+	4. Enter defects details</p>
+<p>
+	5. Select address and an available pickup date</p>
+<p>
+	6. Click on Trimite</p>
+</td><td><p>
+	A service form will be created with the correct item</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.1.7.Test Suite : Search Bar</h4>
+<a name="toc_tc409318"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-483: Input - Zero characters&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the search bar will not return any searches when there is no input data</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on search bar field</p>
+<p>
+	1. Press Enter or click on the Search Icon</p>
+</td><td><p>
+	The search bar will not return anything.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409321"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-484: Input - Numbers 0-9&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the search bar accepts numbers 0 between 9 as input</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on Search Bar field</p>
+<p>
+	2. Type any number between 0 and 9</p>
+<p>
+	3. Press Enter</p>
+</td><td><p>
+	The search bar will return any product that matches the input number.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409324"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-485: Input - Numbers 10-99&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the search bar accepts numbers 10 between 99 as input</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on Search Bar field</p>
+<p>
+	2. Type any number between 10 and 99</p>
+<p>
+	3. Press Enter</p>
+</td><td><p>
+	The search bar will return any product that matches the input number.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409327"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-486: Input - Special Characters&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the search bar does not accept special characters as input ( / ?&nbsp; - _ = +&nbsp; [ ] ; &#39; &quot; &gt; &lt; :&nbsp; ! @ # $ % ^ &amp; * ( )&nbsp;</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on the search bar field</p>
+<p>
+	2. Type in a special character from the list</p>
+</td><td><p>
+	The search bar will not return anything.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409330"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-487: Input - Valid Characters&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the search bar will return any products that exists based on normal characters input</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on Search Bar</p>
+<p>
+	2. Type in Jeans</p>
+<p>
+	3. Press Enter</p>
+</td><td><p>
+	The search bar will return any product that contains the Jeans string.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409333"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-488: Input - Random Characters&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the search bar will not return anything if the input data consists of random characters</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on the search bar</p>
+<p>
+	2. Type in &quot;ajgkhasfgh&quot;</p>
+<p>
+	3. Press enter</p>
+</td><td><p>
+	The search bar will not return any products.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409336"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-489: Suggestions functionality&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the search bar suggestion functionality runs as expected based on the input data typed in</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on the Search Sar</p>
+<p>
+	2. Type in &quot;Jeans&quot;</p>
+</td><td><p>
+	The search bar suggestions will show anything related to the &quot;Jeans&quot; string.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409339"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-490: Search by Click&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the Search by Click functionality is working</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on the Search Bar field</p>
+<p>
+	2. Type in &quot;Jeans&quot;</p>
+<p>
+	3. Click on the Search Icon</p>
+</td><td><p>
+	The search bar will return a page with products that contains the &quot;Jeans&quot; string</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409342"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-491: Search by Enter&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the search bar functionality is working when pressing the Enter button on the keyboard</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Click on the Search Bar input field</p>
+<p>
+	2. Type in &quot;Jeans&quot;</p>
+<p>
+	3. Press Enter on the keyboard</p>
+</td><td><p>
+	The search bar will return a page with products with the &quot;Jeans&quot; string.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.1.8.Test Suite : Filter Products</h4>
+<a name="toc_tc409507"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-494: Price filter - Checkbox&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that Price filter checkbox is working</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Telefoane&quot;</p>
+<p>
+	2. Check price filter &quot;50-100&quot;</p>
+</td><td><p>
+	The products shown are priced between the right filter</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409510"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-495: Price filter - Interval&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the Price filter interval funcitonality is working correctly</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Telefoane&quot;</p>
+<p>
+	2. Set the price filter interval &quot;50 - 1000&quot;&nbsp;</p>
+<p>
+	3. Click on blue arrow</p>
+</td><td><p>
+	The products show are priced between the set interval</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409514"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-496: Brand - Checkbox&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the Brand filter checkbox is working</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Telefoane&quot;</p>
+<p>
+	2. Check &quot;Samsung&quot; brand</p>
+</td><td><p>
+	All products shown are the Samsung brand</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409517"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-497: Brand - Search by keyword&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the brand filter search functionality is working</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Telefoane&quot;</p>
+<p>
+	2. Go to &quot;Brand&quot; filter and click on &quot;mai multe&quot;</p>
+<p>
+	3. Type in on the input field &quot;Oneplus&quot;</p>
+<p>
+	4. Check &quot;Oneplus&quot; box</p>
+<p>
+	5. Click &quot;Aplica filtre&quot;</p>
+</td><td><p>
+	All products shown are the Oneplus brand</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409522"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-498: Order by price ascending&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the order by price ascending filter is working</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Telefoane&quot;</p>
+<p>
+	2. Click on &quot;Ordoneaza dupa&quot; field</p>
+<p>
+	3. Select &quot;Pret crescator&quot;</p>
+</td><td><p>
+	All products are sorted by ascending price</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409527"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-499: Order by price descending&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the order by price descending filter is working</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Telefoane&quot;</p>
+<p>
+	2. Click on &quot;Ordoneaza dupa&quot; field</p>
+<p>
+	3. Select &quot;Pret descrescator&quot;</p>
+</td><td><p>
+	All products in the category selected are ordered by price descending</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409531"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-500: Colour filter&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the Colour filter is working correctly</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to &quot;Fashion-Imbracaminte barbati-Jeans&quot;</p>
+<p>
+	2. Check the &quot;Mov&quot; colour filter</p>
+</td><td><p>
+	All products show are the correct colour</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410942"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-521: Compare products&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user can use the compare functionality to compare two different products</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Select one item of your choice</p>
+<p>
+	2. Click on the &quot;Compara&quot; checkbox to add it to the list</p>
+<p>
+	3. Select one different item of your choice</p>
+<p>
+	4. Click on the &quot;Compara&quot; checkbox to add it to the list</p>
+<p>
+	5. Click on the Checkmark button on the list that was created</p>
+</td><td><p>
+	The user will be redirected to the newly created compare page of the two items where the differences of the products are highlighted</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.1.9.Test Suite : End-to-end</h4>
+<a name="toc_tc409565"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-507: Login-Logout&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user can sign in his account and can sign out after</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	The account must exist already</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to www.emag.ro</p>
+<p>
+	2. Click on &quot;Contul Meu&quot;</p>
+<p>
+	3. Type in email and continue</p>
+<p>
+	4. Type in password and continue</p>
+<p>
+	5. Go to &quot;Contul meu&quot; and click on &quot;Log out&quot;</p>
+</td><td><p>
+	The user will succesfully sign in after typing in his email and password and then he will be logged out after pressing the Log Out button</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409568"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-508: Login-Pick product-Add To Bag-Checkout&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user can succesfully login, pick a product, add it to his shopping cart and succesfully checkout</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Account must exist already</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Go to www.emag.ro</p>
+<p>
+	2. Click on &quot;Contul Meu&quot;</p>
+<p>
+	3. Type in email and password and continue</p>
+<p>
+	4. Go to &quot;Telefoane&quot; and pick iPhone 11 black</p>
+<p>
+	5. Click on &quot;Adauga in Cos&quot;</p>
+<p>
+	6. Go to &quot;Cosul meu&quot;</p>
+<p>
+	7. Click on &quot;Continua&quot;</p>
+</td><td><p>
+	The user can succesfully checkout after signing in and adding the product to his shopping cart</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410968"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-528: Login-Search-Pick-Add-Update-Checkout&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410973"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-530: Guest-Search-Pick-Add-Checkout&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410975"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-531: Guest-Search-Add Favourite-New list&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc411688"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-540: Guest-Search-Filter price-Add Favourite-Add to bag&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.1.10.Test Suite : User Interface</h4>
+<a name="toc_tc410980"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-533: Resolution scaling&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the application behaves correctly on different user resolutions</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td></td><td><p>
+	Behaves as expected</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410983"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-534: Mobile mode&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the application switches to mobile mode and scales correctly when the user uses a mobile device&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td></td><td><p>
+	Behaves as expected</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410986"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-535: Confirmation dialogs&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the user receives confirmation dialogs/boxes/actions when he performs specific actions ( add to bag, add to favourite, delete )</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td></td><td><p>
+	As expected</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410989"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-536: View product images&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that user can view images of a product and can perform zoom-in/out actions</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td></td><td><p>
+	Behaves as expected</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h3 class='doclevel'>1.1.2.Test Suite : Non-Functional Testing</h3>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.1.Test Suite : Performance</h4>
+<a name="toc_tc409297"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-477: Response Times&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the Response Times in Postman are under 800ms</span></p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+<tr><td> <span class="label">Attached files</span></td><td colspan="2"><ul><li>eMAG.ro.postman_collection.json</li><li><a href="https://testlink.scoalainformala.ro/lib/attachments/attachmentdownload.php?skipCheck=1&id=1735"  target="#blank" > eMAG.ro.postman_collection.json</a></li></ul></td></tr></table>
+</div>
+<a name="toc_tc409294"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-476: Performance score&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that perfomance score is following minimum requirements</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Run Lighthouse</p>
+</td><td><p>
+	1. Performance score: min.60</p>
+<p>
+	2. Accessibility score: min.80</p>
+<p>
+	3. Best practices score: min. 80</p>
+<p>
+	4. SEO score: min.80</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+<tr><td> <span class="label">Attached files</span></td><td colspan="2"><ul><li>Lighthouse Scores : (Desktop) eMAG.ro - Lighthouse Report.html</li><li><a href="https://testlink.scoalainformala.ro/lib/attachments/attachmentdownload.php?skipCheck=1&id=1733"  target="#blank" > (Desktop) eMAG.ro - Lighthouse Report.html</a></li></ul></td></tr></table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.2.Test Suite : Compability</h4>
+<a name='toc_'></a>
+<h5 class='doclevel'>1.1.2.2.1.Test Suite : Browsers</h5>
+<a name="toc_tc409302"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-478: Chrome&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the website is compatible and runs correctly in Google Chrome browser</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Open Google Chrome</p>
+<p>
+	2. Go to www.emag.ro</p>
+</td><td><p>
+	The application runs as expected</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409305"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-479: Edge&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the application runs and behaves normal in Edge browser</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Open Microsoft Edge</p>
+<p>
+	2. Go to www.emag.ro</p>
+</td><td><p>
+	The application runs as expected.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409308"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-480: Firefox&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the application runs as expected on Firefox browser</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Open Firefox</p>
+<p>
+	2. Go to www.emag.ro</p>
+</td><td><p>
+	The application runs as expected.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h5 class='doclevel'>1.1.2.2.2.Test Suite : Devices</h5>
+<a name="toc_tc409312"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-481: Android Official App&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the application runs and behaves as expected on an Android device</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Install the eMAG app from Google Play on an Android device</p>
+<p>
+	2. Open it</p>
+</td><td><p>
+	The application runs as expected.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc411669"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-537: Android Chrome Browser&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the application runs and behaves as expected on an Android device in Chrome browser</span></p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h5 class='doclevel'>1.1.2.2.3.Test Suite : OS</h5>
+<a name="toc_tc409558"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-505: Windows 10&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the applications runs and behaves as expected in Windows 10</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Use Chrome browser</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Open Chrome</p>
+<p>
+	2. Go to emag.ro</p>
+</td><td><p>
+	The application runs as expected</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc409561"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-506: Linux&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the applications runs and behaves as expected in Linux</span></p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	Use Chrome browser</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1. Open &quot;Chrome&quot;</p>
+<p>
+	2. Go to emag.ro</p>
+</td><td><p>
+	The application runs as expected</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.3.Test Suite : Security</h4>
+<a name="toc_tc409497"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-492: Password input - Not shown&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that field on the password input in the Sign In page is not showing any characters</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>
+	1.Go to &quot;Contul Meu&quot;</p>
+<p>
+	2. Type email and continue</p>
+<p>
+	3. Type password</p>
+</td><td><p>
+	The input data is not shown and is represented by black dots.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410945"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-522: Secure password&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that when creating a password the following conditions must be met: minimum of 6chars,&nbsp; one uppercase, one lowercase and one special char.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td></td><td><p>
+	The user cannot create a password when the following conditions are not met.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410962"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-526: Email validation&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	<span style="font-family: &quot;Trebuchet MS&quot;, Arial, Verdana, sans-serif; font-size: 11.7px; background-color: rgb(238, 238, 238);">Test that the user receives an email validation link to succesfully create his account after creation.</span></p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td></td><td><p>
+	The user has received an email with a verification link</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410965"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-527: Secure connection&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that upon each visit on the site the connection is secure and uses HTTPS</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td></td><td><p>
+	The site always uses HTTPS connection</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc410977"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-532: Multi-factor authentication&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test that the site provides a&nbsp;multi-factor authentication for login options</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.4.Test Suite : API</h4>
+<a name="toc_tc410971"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TM-QA08-529: API Tests&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">Lucian.Calinescu</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Test for response times and status codes for main functionalities</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+<tr><td> <span class="label">Attached files</span></td><td colspan="2"><ul><li>eMAG.ro.postman_collection.json</li><li><a href="https://testlink.scoalainformala.ro/lib/attachments/attachmentdownload.php?skipCheck=1&id=1734"  target="#blank" > eMAG.ro.postman_collection.json</a></li></ul></td></tr></table>
+</div>
+
+</body>
+</html>
