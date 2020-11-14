@@ -1,0 +1,505 @@
+{
+	"id": "298c8e24-3976-4a08-b435-58bd2787602a",
+	"name": "eMAG.ro",
+	"timestamp": "2020-11-14T11:19:32.172Z",
+	"collection_id": "e473e6b0-c68f-4923-87ce-fb70a597a497",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 27,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "95307468-3edc-4534-94d3-b73deeba1738",
+			"name": "Login In button",
+			"url": "https://www.emag.ro/user/login?ref=hdr_login_btn",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true,
+				"Page contains email field": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Page contains email field": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true,
+					"Page contains email field": true
+				}
+			]
+		},
+		{
+			"id": "4b5dde21-b6bd-48ce-af7b-4bd1aaa7d850",
+			"name": "Laptops Category",
+			"url": "https://www.emag.ro/garez.php?cd20=2&cd11=a%3A1%3A%7Bs%3A7%3A%22user_id%22%3Bi%3A2020580101614615805%3B%7D&cd23=1604762023-41711.252-391588405&cd4=91&cd6=1&cd8=hp_menu_quick-nav_1_1&cd10=category&cd14=1&cd16=popularity%20desc&cd17=60&cd18=&cd46=not_found&cd64=160476202311358848&dr=https://www.emag.ro/&dt=Laptopuri%20-%20eMAG.ro&tid=UA-220157-3&v=1&t=pageview&cid=9518397148.1595618101&cd12=9518397148.1595618101&uid=not_found&cd28=not_found&dl=https://www.emag.ro/laptopuri/c%3Fref=hp_menu_quick-nav_1_1%26type=category",
+			"time": 234,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				234
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "88b6cd13-a501-4b93-8599-31f9d99f0e3d",
+			"name": "Shopping Cart hover - 0 products",
+			"url": "https://www.emag.ro/shopping/header-cart?act=load&source=front",
+			"time": 60,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				60
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "28859994-978d-49dc-8ecf-31e7d995d486",
+			"name": "Add to Favourite button",
+			"url": "https://www.emag.ro/favorites/type/emag/products?ref=add_to_fav_pd",
+			"time": 146,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				146
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "da477eac-f919-4d72-b905-9cd46e56ea5d",
+			"name": "Add to Favourite button",
+			"url": "https://www.emag.ro/favorites/type/emag/products?source=front&limit=6",
+			"time": 176,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				176
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "fef801c7-253d-48aa-a98f-545cd3393bcf",
+			"name": "Delete Favourite button",
+			"url": "https://www.emag.ro/favorites/type/emag/products?ref=fav_remove-from-list-btn%0A",
+			"time": 125,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				125
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "e80e892d-d239-4713-8511-bfa019a03222",
+			"name": "Checkout",
+			"url": "https://www.emag.ro/profile_async/bKOCMKeywPAOsZc8QheVczM2aFRQUEEwYW1zRTN6a0VybWpqSXBhOHpJNzkrUzFTSWhIMDQxMUg4cHJReGs5UWVEalU1OVdSQTM2cGdvays4VjM1ZmpzazlFR1o0eXBOaFFoMkRKc3dPbDdZYVRYT0tGd1dxRHhld2x5MmUrVVdDUkFWeTNVdlo3MWZkaURyNytJZFRQWEF1K0RrUklTdXFMMFhLT0hlUUlPelNaRTRBbzRLN3o3cEhQU1htckgyS2dvNnVMY1BrVGpmdlM2K0c4VFNITHpDdGZwUlRIbkE4TnpjZmc9PQ__/o/?r=1604762669&c=-8&sd=0",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "4be9670e-bbc1-46c6-b07b-99f4679ceeb4",
+			"name": "Delivery options",
+			"url": "https://www.emag.ro/cart/get-delivery-options",
+			"time": 67,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				67
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "9054d59a-17c5-44fa-9bf5-8dd7b9baca0b",
+			"name": "Update quantity in shopping cart",
+			"url": "https://www.emag.ro/cart/update",
+			"time": 78,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				78
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "026502c2-0eb3-4ddf-968b-e44c5549ee5e",
+			"name": "Update quantity - Price is updated",
+			"url": "https://www.emag.ro/cart/get-totals",
+			"time": 78,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				78
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "eff5d293-7cf5-4a93-8f62-359cac6c4697",
+			"name": "Remove item from shopping cart",
+			"url": "https://www.emag.ro/cart/remove",
+			"time": 84,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				84
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "57923e55-be77-49f7-9293-9fc0fa183f43",
+			"name": "Empty shopping cart",
+			"url": "https://www.emag.ro/cart/get-empty",
+			"time": 97,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				97
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "1be69d96-aff1-4c20-9e0f-6af396064580",
+			"name": "Favourite list",
+			"url": "https://www.emag.ro/favorites/lists/type/emag/product_ids?source=front",
+			"time": 119,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				119
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The response time is less than 800ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1359,
+	"collection": {
+		"requests": [
+			{
+				"id": "95307468-3edc-4534-94d3-b73deeba1738",
+				"method": "GET"
+			},
+			{
+				"id": "4b5dde21-b6bd-48ce-af7b-4bd1aaa7d850",
+				"method": "POST"
+			},
+			{
+				"id": "88b6cd13-a501-4b93-8599-31f9d99f0e3d",
+				"method": "GET"
+			},
+			{
+				"id": "28859994-978d-49dc-8ecf-31e7d995d486",
+				"method": "POST"
+			},
+			{
+				"id": "da477eac-f919-4d72-b905-9cd46e56ea5d",
+				"method": "GET"
+			},
+			{
+				"id": "fef801c7-253d-48aa-a98f-545cd3393bcf",
+				"method": "DELETE"
+			},
+			{
+				"id": "e80e892d-d239-4713-8511-bfa019a03222",
+				"method": "GET"
+			},
+			{
+				"id": "4be9670e-bbc1-46c6-b07b-99f4679ceeb4",
+				"method": "POST"
+			},
+			{
+				"id": "9054d59a-17c5-44fa-9bf5-8dd7b9baca0b",
+				"method": "POST"
+			},
+			{
+				"id": "026502c2-0eb3-4ddf-968b-e44c5549ee5e",
+				"method": "POST"
+			},
+			{
+				"id": "eff5d293-7cf5-4a93-8f62-359cac6c4697",
+				"method": "POST"
+			},
+			{
+				"id": "57923e55-be77-49f7-9293-9fc0fa183f43",
+				"method": "POST"
+			},
+			{
+				"id": "1be69d96-aff1-4c20-9e0f-6af396064580",
+				"method": "GET"
+			}
+		]
+	}
+}
