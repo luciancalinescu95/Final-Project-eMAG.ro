@@ -23,8 +23,8 @@ describe("Shopping Cart",()=>{
         cy.get('.product-page-actions > .btn-primary').click(); // added to cart
         cy.get('body > div.ph-modal.modal.fade.product-purchased-modal.in > div > div > div.modal-header > button').click(); //confirmation
         cy.get('#my_cart > i').click(); // go to shopping cart
-        cy.get('.price-main').should("contain","999");
-        cy.get('#cartProductsPage > div.emg-col3 > div.cart-widget.order-summary-widget.cart-widget-side.emg-right > div > div.order-summary-text > div:nth-child(2) > span.emg-right.order-summary-items-price > span.money-int').should("contain","999");
+        cy.get('.price-main').should("contain","639");
+        cy.get('#cartProductsPage > div.emg-col3 > div.cart-widget.order-summary-widget.cart-widget-side.emg-right > div > div.order-summary-text > div:nth-child(2) > span.emg-right.order-summary-items-price > span.money-int').should("contain","639");
         
     });
 
@@ -38,8 +38,8 @@ describe("Shopping Cart",()=>{
         cy.get('.product-page-actions > .btn-primary').click(); // added to cart
         cy.get('body > div.ph-modal.modal.fade.product-purchased-modal.in > div > div > div.modal-header > button').click(); //confirmation
         cy.get('#my_cart > i').click(); // go to shopping cart
-        cy.get('.price-main > .money-int').should("contain","1.999")
-        cy.get('#cartProductsPage > div.emg-col3 > div.cart-widget.order-summary-widget.cart-widget-side.emg-right > div > div.order-summary-text > div:nth-child(2) > span.emg-right.order-summary-items-price > span.money-int').should("contain","1.999")
+        cy.get('.price-main > .money-int').should("contain","1.279")
+        cy.get('#cartProductsPage > div.emg-col3 > div.cart-widget.order-summary-widget.cart-widget-side.emg-right > div > div.order-summary-text > div:nth-child(2) > span.emg-right.order-summary-items-price > span.money-int').should("contain","1.279")
         
     });
 
